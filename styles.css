@@ -1,10 +1,21 @@
 body {
     font-family:Arial, Helvetica, sans-serif;
-    background-color: rgb(193, 247, 247);
+
 }
 
-header {
-    font-size: small;
+h1 {
+    height: 10%;
+    width: 30%;
+    text-align: center;
+    background-color:gray;
+}
+
+.intro {
+    width: max-content;
+}
+
+h2 {
+    text-align: center;
 }
 
 nav {
@@ -12,7 +23,6 @@ nav {
 }
 nav ul {
     padding: 0%;
-    background-color: gainsboro;
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -27,6 +37,7 @@ nav ul li {
 nav ul li a {
     color: green;
 }
+
 
 .sectionProjects {
     display: flex;
