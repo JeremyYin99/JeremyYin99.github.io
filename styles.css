@@ -1,0 +1,45 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(193, 247, 247);
+}
+
+header {
+    font-size: small;
+}
+
+nav {
+    padding: 0%;
+}
+nav ul {
+    padding: 0%;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+
+nav ul li {
+    margin: auto;
+    color: rgb(207, 32, 70);
+}
+
+nav ul li a {
+    color: green;
+}
+
+.sectionProjects {
+    display: flex;
+    flex-direction: row;
+}
+
+.projects {
+    margin: auto;
+}
+
+
+header {
+    
+    color: black;
+
+}
