@@ -1,99 +1,171 @@
-.container {
-    margin-left: auto;
-    margin-right: auto;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* background-image: url(Images/Skyline.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
+:root {
+    --background: #9cacbf;
+    --nav-background: #0a1417;
+    --title-slide-background: #012e67;
+    --text-color: #e2f3fb;
+    --content-background: #2b6684;
 }
 
-
-h1 {
-    margin-left: auto;
-    margin-right: auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: black;
+html {
+    font-family: "Lato", sans-serif;
+    background-color: var(--background);
 }
 
-
-
-h2 {
-    color: black;
-}
-h3 {
-    text-align: center;
-    color: black;
-}
-
-header {
-    text-align: center;
-    color: black;
-
-}
-
-
+/* Stuff under the header */
 nav {
-    padding-left: 20%;
-    padding-right: 20%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-nav ul {
-    padding: 0%;
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-}
-  
+    top: 0px;
+    position: fixed;
+    background-color: var(--nav-background);
+    color: var(--text-color);
 
-nav ul li {
-    margin: auto;
+    display: grid;
+    grid-template-columns: 3fr repeat(3, 1fr) 3fr;
+    height: 5vh;
+    width: 100vw;
+    justify-items: center;
+    align-items: center;
 }
-
 
 a {
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
 }
 
-/*project stuff*/
-section section div ul li {
-    color: black;
+a:hover {
+    color: grey;
+    transition: all 0.3s ease;
 }
 
-.big-section {
+.logo {
+    grid-column: 1 /  span 1;
+    font-size: 30px;
+}
+
+.nav-a {
+    grid-column: 2 / span 1;
+}
+
+.nav-b {  
+    grid-column: 3 / span 1;
+}
+
+.nav-c {
+    grid-column: 4 / span 1;
+}
+
+.nav-d {
+    grid-column: 5 / span 1;
+}
+
+
+main {
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-rows: repeat(3, 95vh);
+}
+
+h2 {
+    margin: 15px;
+    font-size: 30px;
     text-align: center;
 }
 
-
-
-.section-projects {
-    padding-left: 20%;
-    padding-right: 20%;
-    display: flex;
-    flex-direction: row;
+p {
+    font-size: 20px;
+    margin: 10px 20px;
+    text-align: left;
 }
 
-.projects {
-    margin: auto;
-}
-
-.para {
-    padding-left: 20%;
-    padding-right: 20%;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: black;
-}
-
-.column {
-    width: 33%;
-}
-
-.v-list {
-    padding-bottom: 10px;
+ul {
+    list-style-type: none;
     list-style: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-slide {
+    height: 100%;
+    width: 100%;
+    padding: 75px;
+    background-color: var(--title-slide-background);
+}
+
+.hero {
+    color: var(--text-color);
     text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 60px;
+}
+
+/* about-me stuff */
+.about-me-slide-title-container {
+    height: 100%;
+    width: 100%;
+    padding: 75px;
+}
+
+.about-me-slide-title {
+    grid-column: 1 / span 1;
+}
+
+.about-me-content-container {
+    height: 75%;
+    width: 75%;
+    border-radius: 15px;
+    padding: 100px 20px;
+    background-color: var(--content-background);
+}
+
+.about-me-content {
+    grid-column: 2 / span 2;
+}
+
+.intro {
+    font-family: "Kaushan Script", sans-serif;
+    font-size: 40px;
+}
+
+/* experences-stuff */
+.experence-content {
+    grid-column: 1 / span 2;
+}
+
+.experience-slide-title {
+    grid-column: 2 / span 1;
+}
+
+.education, .bridge, .esaa {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.a-title {
+    grid-column: 1 / span 1;
+}
+
+.a-description {
+    grid-column: 2 / span 1;
+}
+
+/* skills-stuff */
+.skills-slide-title {
+    grid-column: 1 / span 1;
+}
+
+.skills-content {
+    grid-column: 2 / span 2;
 }
